@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ContentView: View {
     var body: some View {
@@ -15,6 +16,18 @@ struct ContentView: View {
                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
         }
             
+    }
+}
+
+// Firebase 🔥
+struct FirebaseLoginApp: App {
+    init() {
+        FirebaseApp.configure()
+    }
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
     }
 }
 
